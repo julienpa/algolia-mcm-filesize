@@ -1,7 +1,7 @@
 {
   "name": "algolia-mcm-filesize",
-  "version": "1.0.0",
-  "description": "Simple script to get per cluster index size while using Algolia MCM feature",
+  "version": "1.0.1",
+  "description": "Simple script to get per cluster index size when using Algolia MCM feature",
   "main": "mcm-filesize.js",
   "dependencies": {
     "algoliasearch": "^4.2.0"

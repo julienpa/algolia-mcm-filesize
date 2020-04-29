@@ -11,7 +11,9 @@ JSON data stored on disk and used as a backup for e.g. doing a full reindex.
 
 ## What is it?
 
-This package is a simple script that helps you compute the index size while using Algolia's [MCM](https://www.algolia.com/doc/guides/scaling/managing-multiple-clusters-mcm/)
+This package is a simple script that helps you compute the index size
+(per cluster and total for an app) when using Algolia's
+[MCM](https://www.algolia.com/doc/guides/scaling/managing-multiple-clusters-mcm/)
 architecture.
 
 ## How to use it?
@@ -24,8 +26,9 @@ npm i algolia-mcm-filesize
 yarn add algolia-mcm-filesize
 ```
 
-It has been designed to be used in a shell environment so it returns JSON
-instead of a pure JS object. Here is a quick usage suggestion:
+It has been designed for manual use in a shell or to pipe it to another
+system, so it returns JSON instead of a pure JS object.
+Here is a quick usage suggestion:
 
 ### index.js
 ```javascript
@@ -48,6 +51,24 @@ Using [jq](https://stedolan.github.io/jq/) for the sake of the example
 ```bach
 node index.js | jq .
 ```
+
+### output
+
+Sample output (cluster names are usually prefixed with `d` or `v`)
+
+```json
+{
+  "cluster-1": 91,
+  "cluster-2": 83,
+  "cluster-3": 95,
+  "total": 269
+}
+```
+
+Values are expressed in **gigabyte**
+([GB, not GiB](https://en.wikipedia.org/wiki/Gigabyte))
+
+Standard limit is 100 GB per cluster
 
 ## Technical details
 
