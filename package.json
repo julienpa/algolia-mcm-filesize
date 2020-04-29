@@ -1,0 +1,37 @@
+{
+  "name": "algolia-mcm-filesize",
+  "version": "1.0.0",
+  "description": "Simple script to get per cluster index size while using Algolia MCM feature",
+  "main": "mcm-filesize.js",
+  "dependencies": {
+    "algoliasearch": "^4.2.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.3"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienpa/algolia-mcm-filesize.git"
+  },
+  "keywords": [
+    "algolia",
+    "search",
+    "mcm",
+    "multicluster",
+    "filesize",
+    "indexsize",
+    "size"
+  ],
+  "author": "Julien Paroche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julienpa/algolia-mcm-filesize/issues"
+  },
+  "homepage": "https://github.com/julienpa/algolia-mcm-filesize#readme",
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}
